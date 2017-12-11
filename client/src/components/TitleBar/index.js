@@ -1,4 +1,5 @@
 import React from 'react';
+import ErrorBanner from '../ErrorBanner';
 import Spinner from '../Spinner';
 
 const TitleBar = () => (
@@ -6,6 +7,7 @@ const TitleBar = () => (
     <div className="title">
       <h2>Todo App</h2>
     </div>
+    <ErrorBanner error="Stuff happened!!!" clearError={() => alert('Error banner closed!')} />
     <Spinner loading={false} />
   </div>
 );

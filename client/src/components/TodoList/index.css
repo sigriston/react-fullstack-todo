@@ -1,0 +1,29 @@
+.todo-list {
+  height: 100%;
+  background-color: white;
+  border: 2px solid black;
+  overflow-y: scroll;
+  margin-bottom: 12px;
+}
+.todo-list ul {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.todo-list li {
+  display: block;
+  list-style: none;
+  border: 1px solid gray;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+.todo-list li:not(:first-child) {
+  margin-bottom: 10px;
+}
+.todo-list li input[type='checkbox'] {
+  vertical-align: text-bottom;
+}

@@ -8,7 +8,7 @@ const TitleBar = () => (
       <h2>Todo App</h2>
     </div>
     <ErrorBanner error="Stuff happened!!!" clearError={() => alert('Error banner closed!')} />
-    <Spinner loading={false} />
+    <Spinner loading={true} />
   </div>
 );
 

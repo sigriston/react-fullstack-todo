@@ -1,0 +1,35 @@
+.input {
+  flex: none;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+input.input-todo {
+  width: 100%;
+  padding-left: 20px;
+  border: 2px solid black;
+  border-right: 0;
+  font-size: 1.2em;
+  height: 54px;
+  font-family: 'Roboto', sans-serif;
+}
+input.input-todo:focus {
+  outline: none;
+}
+input.input-todo::placeholder {
+  opacity: .2;
+  font-style: italic;
+}
+button.button-add {
+  border: 2px solid black;
+  border-radius: 0;
+  padding: 0 20px;
+  cursor: pointer;
+  height: 54px;
+  font-size: 2em;
+}
+button.button-add:focus {
+  outline: none;
+}

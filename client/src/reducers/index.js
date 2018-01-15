@@ -1,2 +1,6 @@
-const rootReducer = (state) => state;
-export default rootReducer;
+import todos from './todos';
+import { combineReducers } from 'redux';
+
+export default combineReducers({
+  todos
+});

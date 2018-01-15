@@ -5,7 +5,7 @@ class Todo extends React.Component {
     const { todo } = this.props;
     return (
       <div className="todo-item" onClick={this.handleClick}>
-        <input type="checkbox" checked={todo.completed} readOnly /> {todo.description}
+        <input type="checkbox" checked={todo.get('completed')} readOnly /> {todo.get('description')}
       </div>
     );
   }

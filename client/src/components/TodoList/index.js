@@ -6,7 +6,7 @@ const TodoList = ({ todos }) => (
   <div id="todo-list" className="todo-list">
     <ul>
       {todos.map((todo, index) =>
-        <li key={todo.id}><Todo todo={todo} toggleTodo={({ description }) => alert(`TOGGLED: ${description}`)} /></li>
+        <li key={todo.get('id')}><Todo todo={todo} toggleTodo={() => alert('TOGGLED A TODO')} /></li>
       )}
     </ul>
   </div>

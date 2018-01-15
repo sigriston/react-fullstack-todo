@@ -3,8 +3,7 @@ import './index.css';
 import TitleBar from '../TitleBar';
 import InputBar from '../../containers/InputBar';
 import TodoList from '../../containers/TodoList';
-import VisibilityFilter from '../VisibilityFilter';
-import { ACTIVE } from '../../constants/visibilityFilterTypes';
+import VisibilityFilter from '../../containers/VisibilityFilter';
 
 class App extends Component {
   render() {
@@ -13,7 +12,7 @@ class App extends Component {
         <TitleBar />
         <InputBar />
         <TodoList />
-        <VisibilityFilter filter={ACTIVE} onFilterChange={(f) => alert(`NEW FILTER: ${f}`)}/>
+        <VisibilityFilter />
       </div>
     );
   }

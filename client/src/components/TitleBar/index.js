@@ -1,5 +1,5 @@
 import React from 'react';
-import ErrorBanner from '../ErrorBanner';
+import ErrorBanner from '../../containers/ErrorBanner';
 import Spinner from '../../containers/Spinner';
 
 const TitleBar = () => (
@@ -7,7 +7,7 @@ const TitleBar = () => (
     <div className="title">
       <h2>Todo App</h2>
     </div>
-    <ErrorBanner error="Stuff happened!!!" clearError={() => alert('Error banner closed!')} />
+    <ErrorBanner />
     <Spinner />
   </div>
 );

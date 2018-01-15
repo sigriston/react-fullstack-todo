@@ -5,9 +5,9 @@ import {
   TOGGLE_TODO
 } from '../constants/todosActionTypes';
 
-export const getTodos = () => ({
+export const getTodos = (filter) => ({
   type: GET_TODOS,
-  payload: api.getTodos()
+  payload: api.getTodos(filter)
 });
 
 export const addTodo = (description) => ({

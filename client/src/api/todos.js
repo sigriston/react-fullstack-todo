@@ -1,7 +1,20 @@
 import axios from 'axios';
+import { ALL, ACTIVE, COMPLETED } from '../constants/visibilityFilterTypes';
 
-export const getTodos = () => (
-  axios.get('/api/todos')
+const buildVisibilityQuery = (completed) => {
+  const query = { where: { completed } };
+  const strQuery = encodeURIComponent(JSON.stringify(query));
+  return `?filter=${strQuery}`;
+};
+
+const visibilityQuery = {
+  [ALL]: '',
+  [ACTIVE]: buildVisibilityQuery(false),
+  [COMPLETED]: buildVisibilityQuery(true)
+};
+
+export const getTodos = (filter = ALL) => (
+  axios.get(`/api/todos${visibilityQuery[filter]}`)
     .then(res => res.data)
 );
 
